@@ -2,7 +2,7 @@ import time
 import random
 
 class EVCharger:
-    def __init__(self, battery_capacity_kwh=40, charging_rate_kw=7.4):
+    def __init__(self, battery_capacity_kwh=50, charging_rate_kw=7.68):
         self.capacity = battery_capacity_kwh
         self.rate = charging_rate_kw
         self.current_charge = 0.0
@@ -40,7 +40,7 @@ class EVCharger:
 
 # --- Simulation ---
 if __name__ == "__main__":
-    ev = EVCharger(battery_capacity_kwh=40, charging_rate_kw=7.4)
+    ev = EVCharger(battery_capacity_kwh=50, charging_rate_kw=7.68)
     ev.start_charging(current_percent=20)
 
     while ev.is_charging:
